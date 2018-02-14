@@ -1,3 +1,5 @@
+package Projet2AssuranceQualiteLogiciels;
+
 
 public class Main {
 
