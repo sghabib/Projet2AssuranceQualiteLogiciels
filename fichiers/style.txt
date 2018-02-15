@@ -1,0 +1,4 @@
+Les noms de classe doivent commencer par une majuscule.
+Les noms de variable doivent commencer par une minuscule.
+Les nom des variables ne doovent pas contenir d'espace, mais des tirets-bas ( si nécessaire ).
+djfhfshfdshf
