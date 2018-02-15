@@ -1,5 +1,10 @@
 package Projet2AssuranceQualiteLogiciels;
 
-public class Facture {
+import java.util.ArrayList;
 
+public class Facture {
+	ArrayList<Client> listeClient = new ArrayList<>();
+	public Facture() {
+		
+	}
 }

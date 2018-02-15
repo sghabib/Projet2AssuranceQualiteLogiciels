@@ -2,9 +2,9 @@ package Projet2AssuranceQualiteLogiciels;
 
 
 public class Main {
-
+private static String cheminFichierImport = "fichiers/facture.txt";
 	public static void main(String[] args) {
-		System.out.println("Je m'appelle Philippe");
+		Facture facture = new importerText(cheminFichierImport).getFacture();
 	}
 
 }
