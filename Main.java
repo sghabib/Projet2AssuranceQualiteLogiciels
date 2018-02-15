@@ -4,7 +4,7 @@ package Projet2AssuranceQualiteLogiciels;
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("Je m'apelle Philippe");
+		System.out.println("Je m'appelle Philippe");
 	}
 
 }
