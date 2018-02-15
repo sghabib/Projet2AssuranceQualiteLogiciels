@@ -7,4 +7,8 @@ public class Facture {
 	public Facture() {
 		
 	}
+	
+	public void afficherFacture() {
+		
+	}
 }
