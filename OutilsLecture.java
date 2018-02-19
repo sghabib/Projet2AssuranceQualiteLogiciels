@@ -14,7 +14,7 @@ package Projet2AssuranceQualiteLogiciels;
 import java.io.*;
 
 /**
- * Classe qui contient certaines m�thodes utilitaires de lecture.
+ * Classe qui contient certaines méthodes utilitaires de lecture.
  */
 
 public class OutilsLecture {
@@ -22,15 +22,15 @@ public class OutilsLecture {
 	public static final char LECTURE_CLAVIER = 'C';
 	public static final char LECTURE_FICHIER = 'F';
 
-	// Nom logique du fichier. Par d�faut, lecture du clavier.
+	// Nom logique du fichier. Par défaut, lecture du clavier.
 	public static BufferedReader fic = 
 			new BufferedReader( new InputStreamReader( System.in ) );
 	
-	// Type de Lecture. Par d�faut, lecture du clavier.
+	// Type de Lecture. Par défaut, lecture du clavier.
 	public static char type = LECTURE_CLAVIER;
 
 	/**
-	 * On d�finit le constructeur private pour emp�cher la cr�ation d'instances
+	 * On définit le constructeur private pour empêcher la création d'instances
 	 * de la classe OutilsLecture.
 	 */
 	
@@ -38,11 +38,11 @@ public class OutilsLecture {
 	}
 	
 	/**
-	 * La m�thode publique lireEntree() permet d'afficher une question et
-	 * de lire seulement la touche Entr�e du clavier.
+	 * La méthode publique lireEntree() permet d'afficher une question et
+	 * de lire seulement la touche Entrée du clavier.
 	 * 
 	 * @param question
-	 *            La question � afficher.
+	 *            La question à afficher.
 	 */
 
 	public static void lireEntree( String question ) {
@@ -66,7 +66,7 @@ public class OutilsLecture {
 
 				lgChaine = chaine.length();
 
-				// Erreur, si la cha�ne lue n'est pas vide.
+				// Erreur, si la chaîne lue n'est pas vide.
 
 				if ( lgChaine > 0 ) {
 					System.out.println( "\nErreur, appuyez sur la touche "
@@ -76,7 +76,7 @@ public class OutilsLecture {
 			}
 
 			catch ( IOException errIO ) {
-				System.out.println( "\nUne erreur d'entr�e-sortie" +
+				System.out.println( "\nUne erreur d'entrée-sortie" +
 						" est survenue." );
 				valide = false;
 			}
@@ -89,12 +89,12 @@ public class OutilsLecture {
 	}
 
 	/**
-	 * La m�thode publique lireChaine() permet d'afficher une question et de
-	 * lire une cha�ne de caract�res quelconque.
+	 * La méthode publique lireChaine() permet d'afficher une question et de
+	 * lire une chaîne de caractères quelconque.
 	 * 
 	 * @param question
-	 *            La question � afficher.
-	 * @return La cha�ne de caract�res lue.
+	 *            La question à afficher.
+	 * @return La chaîne de caractères lue.
 	 */
 
 	public static String lireChaine( String question ) {
@@ -107,7 +107,7 @@ public class OutilsLecture {
 			System.out.print( question );
 
 			try {
-				// Peut lire une cha�ne du fichier texte des jeux d'essai
+				// Peut lire une chaîne du fichier texte des jeux d'essai
 				// ou du clavier.
 				chaine = fic.readLine();
 				
@@ -118,17 +118,17 @@ public class OutilsLecture {
 
 				lgChaine = chaine.length();
 
-				// Erreur, si la cha�ne lue est vide.
+				// Erreur, si la chaîne lue est vide.
 
 				if ( lgChaine == 0 ) {
-					System.out.println( "\nErreur, l'entr�e ne doit pas" +
+					System.out.println( "\nErreur, l'entrée ne doit pas" +
 							" �tre vide." );
 					valide = false;
 				}
 			}
 
 			catch ( IOException errIO ) {
-				System.out.println( "\nUne erreur d'entr�e-sortie" +
+				System.out.println( "\nUne erreur d'entrée-sortie" +
 						" est survenue." );
 				valide = false;
 			}
@@ -144,16 +144,16 @@ public class OutilsLecture {
 
 	/**
 	 * La m�thode publique lireChaineValide() permet d'afficher une question et
-	 * de lire une cha�ne de caract�res dont la longueur fait partie d'un
+	 * de lire une chaîne de caractères dont la longueur fait partie d'un
 	 * intervalle.
 	 * 
 	 * @param question
-	 *            La question � afficher.
+	 *            La question à afficher.
 	 * @param nbMinCar
-	 *            Le nombre minimum de caract�res � lire.
+	 *            Le nombre minimum de caractères à lire.
 	 * @param nbMaxCar
-	 *            Le nombre maximum de caract�res � lire.
-	 * @return La cha�ne de caract�res lue.
+	 *            Le nombre maximum de caractères à lire.
+	 * @return La cha�ne de caractères lue.
 	 */
 
 	public static String lireChaineValide( String question,
@@ -168,12 +168,12 @@ public class OutilsLecture {
 			chaine = OutilsLecture.lireChaine( question );
 			lgChaine = chaine.length();
 
-			// Erreur, si le nombre de caract�res de la cha�ne lue
+			// Erreur, si le nombre de caractères de la chaîne lue
 			// n'est pas entre nbMinCar et nbMaxCar.
 
 			if ( lgChaine < nbMinCar || lgChaine > nbMaxCar ) {
 				System.out.println( "\nErreur, entrez entre " + nbMinCar +
-						" et " + nbMaxCar + " caract�res." );
+						" et " + nbMaxCar + " caractères." );
 				valide = false;
 			}
 		} while ( !valide );
@@ -182,14 +182,14 @@ public class OutilsLecture {
 	}
 
 	/**
-	 * La m�thode publique lireChaineExacte() permet d'afficher une question et
-	 * de lire une cha�ne de caract�res d'une certaine longueur.
+	 * La méthode publique lireChaineExacte() permet d'afficher une question et
+	 * de lire une chaîne de caractères d'une certaine longueur.
 	 * 
 	 * @param question
-	 *            La question � afficher.
+	 *            La question à afficher.
 	 * @param nbCar
-	 *            Le nombre exact de caract�res � lire.
-	 * @return La cha�ne de caract�res lue.
+	 *            Le nombre exact de caractères à lire.
+	 * @return La chaîne de caractères lue.
 	 */
 
 	public static String lireChaineExacte( String question, int nbCar ) {
@@ -203,7 +203,7 @@ public class OutilsLecture {
 			chaine = OutilsLecture.lireChaine( question );
 			lgChaine = chaine.length();
 
-			// Erreur, si le nombre de caract�res de la cha�ne lue
+			// Erreur, si le nombre de caractères de la chaîne lue
 			// n'est pas exactement nbCar.
 
 			if ( lgChaine != nbCar ) {
@@ -217,12 +217,12 @@ public class OutilsLecture {
 	}
 
 	/**
-	 * La m�thode publique lireCaractere() permet d'afficher une question et de
-	 * lire un caract�re quelconque.
+	 * La méthode publique lireCaractere() permet d'afficher une question et de
+	 * lire un caractère quelconque.
 	 * 
 	 * @param question
-	 *            La question � afficher.
-	 * @return Le caract�re lu.
+	 *            La question à afficher.
+	 * @return Le caractère lu.
 	 */
 
 	public static char lireCaractere( String question ) {
@@ -235,46 +235,46 @@ public class OutilsLecture {
 			chaine = OutilsLecture.lireChaine( question );
 			lgChaine = chaine.length();
 
-			// Erreur, si le nombre de caract�res de la cha�ne lue
+			// Erreur, si le nombre de caractères de la chaîne lue
 			// n'est pas exactement 1.
 			
 			if ( lgChaine != 1 ) {
-				System.out.println( "\nErreur, entrez un seul caract�re." );
+				System.out.println( "\nErreur, entrez un seul caractère." );
 				valide = false;
 			}
 		} while ( !valide );
 
-		// Retourne le premier caract�re de la cha�ne lue.
+		// Retourne le premier caractère de la chaîne lue.
 		return chaine.charAt( 0 );
 	}
 
 	/**
-	 * La m�thode publique lireOuiNon() permet d'afficher une question et de
-	 * lire une r�ponse O ou N de l'utilisateur.
+	 * La méthode publique lireOuiNon() permet d'afficher une question et de
+	 * lire une réponse O ou N de l'utilisateur.
 	 * 
 	 * @param question
-	 *            La question � afficher.
-	 * @return Le caract�re O ou N en majuscule.
+	 *            La question à afficher.
+	 * @return Le caractère O ou N en majuscule.
 	 */
 
 	public static char lireOuiNon( String question ) {
 		final char OUI = 'O';
 		final char NON = 'N';
 		
-		char rep = '\0';  // Caract�re nul (vide).
+		char rep = '\0';  // Caractère nul (vide).
 		boolean valide;
 
 		do {
 			valide = true;
 
-			// Convertir le caract�re lu en majuscule.
+			// Convertir le caractère lu en majuscule.
 			rep = Character.toUpperCase(
 					OutilsLecture.lireCaractere( question ) );
 
-			// Erreur, si le caract�re lu n'est pas O ou N.
+			// Erreur, si le caractère lu n'est pas O ou N.
 			
 			if ( rep != OUI && rep != NON ) {
-				System.out.println( "\nErreur, r�pondez par " + OUI + " ou "
+				System.out.println( "\nErreur, répondez par " + OUI + " ou "
 						+ NON + " seulement." );
 				valide = false;
 			}
@@ -284,21 +284,21 @@ public class OutilsLecture {
 	}
 
 	/**
-	 * La m�thode publique lireCaractereValide() permet d'afficher une question
-	 * et de lire un caract�re qui fait partie d'un intervalle.
+	 * La méthode publique lireCaractereValide() permet d'afficher une question
+	 * et de lire un caractère qui fait partie d'un intervalle.
 	 * 
 	 * @param question
-	 *            La question � afficher.
+	 *            La question à afficher.
 	 * @param carMin
 	 *            Le caract�re minimum.
 	 * @param carMax
-	 *            Le caract�re maximum.
-	 * @return Le caract�re lu en majuscule.
+	 *            Le caractère maximum.
+	 * @return Le caractère lu en majuscule.
 	 */
 
 	public static char lireCaractereValide( String question,
 										    char carMin, char carMax ) {
-		char rep = '\0';  // Caract�re nul (vide).
+		char rep = '\0';  // Caractère nul (vide).
 		boolean valide;
 
 		// Convertir carMin et carMax en majuscules.
@@ -308,14 +308,14 @@ public class OutilsLecture {
 		do {
 			valide = true;
 
-			// Convertir le caract�re lu en majuscule.
+			// Convertir le caractère lu en majuscule.
 			rep = Character.toUpperCase(
 					OutilsLecture.lireCaractere( question ) );
 
-			// Erreur, si le caract�re lu n'est pas entre carMin et carMax.
+			// Erreur, si le caractère lu n'est pas entre carMin et carMax.
 
 			if ( rep < carMin || rep > carMax ) {
-				System.out.println( "\nErreur, entrez un caract�re entre "
+				System.out.println( "\nErreur, entrez un caractère entre "
 						+ carMin + " et " + carMax + "." );
 				valide = false;
 			}
@@ -325,37 +325,37 @@ public class OutilsLecture {
 	}
 
 	/**
-	 * La m�thode publique lireCaractereDisparate() permet d'afficher une
-	 * question et de lire un caract�re qui fait partie d'une certaine cha�ne
-	 * de caract�res.
+	 * La méthode publique lireCaractereDisparate() permet d'afficher une
+	 * question et de lire un caractère qui fait partie d'une certaine chaîne
+	 * de caractères.
 	 * 
 	 * @param question
-	 *            La question � afficher.
+	 *            La question à afficher.
 	 * @param carPossibles
-	 *            La cha�ne de caract�res qui contient les diff�rents
-	 *            caract�res que l'on peut lire.
-	 * @return Le caract�re lu en majuscule.
+	 *            La chaîne de caractères qui contient les différents
+	 *            caractères que l'on peut lire.
+	 * @return Le caractère lu en majuscule.
 	 */
 
 	public static char lireCaractereDisparate( String question,
 											   String carPossibles ) {
-		char rep = '\0';  // Caract�re nul (vide).
+		char rep = '\0';  // Caractère nul (vide).
 		boolean valide;
 
-		// Convertir les caract�res possibles en majuscules.
+		// Convertir les caractères possibles en majuscules.
 		carPossibles = carPossibles.toUpperCase();
 
 		do {
 			valide = true;
 
-			// Convertir le caract�re lu en majuscule.
+			// Convertir le caractère lu en majuscule.
 			rep = Character.toUpperCase(
 					OutilsLecture.lireCaractere( question ) );
 
-			// Erreur, si le caract�re lu ne fait pas partie des car. possibles.
+			// Erreur, si le caractère lu ne fait pas partie des car. possibles.
 			
 			if ( carPossibles.indexOf( rep ) == -1 ) {
-				System.out.println("\nErreur, entrez un caract�re parmi les "
+				System.out.println("\nErreur, entrez un caractère parmi les "
 						+ "suivants : " + carPossibles + ".");
 				valide = false;
 			}
@@ -365,11 +365,11 @@ public class OutilsLecture {
 	}
 
 	/**
-	 * La m�thode publique lireEntier() permet d'afficher une question et de
+	 * La méthode publique lireEntier() permet d'afficher une question et de
 	 * lire un nombre entier quelconque.
 	 * 
 	 * @param question
-	 *            La question � afficher.
+	 *            La question à afficher.
 	 * @return Le nombre entier lu.
 	 */
 
@@ -398,11 +398,11 @@ public class OutilsLecture {
 	}
 
 	/**
-	 * La m�thode publique lireEntierValide() permet d'afficher une question et
+	 * La méthode publique lireEntierValide() permet d'afficher une question et
 	 * de lire un nombre entier qui fait partie d'un intervalle.
 	 * 
 	 * @param question
-	 *            La question � afficher.
+	 *            La question à afficher.
 	 * @param min
 	 *            Le nombre minimum.
 	 * @param max
@@ -432,12 +432,12 @@ public class OutilsLecture {
 	}
 
 	/**
-	 * La m�thode publique lireReel() permet d'afficher une question et de lire
-	 * un nombre r�el quelconque.
+	 * La méthode publique lireReel() permet d'afficher une question et de lire
+	 * un nombre réel quelconque.
 	 * 
 	 * @param question
-	 *            La question � afficher.
-	 * @return Le nombre r�el lu.
+	 *            La question à afficher.
+	 * @return Le nombre réel lu.
 	 */
 
 	public static double lireReel( String question ) {
@@ -456,7 +456,7 @@ public class OutilsLecture {
 
 			catch ( NumberFormatException errFormat ) {
 				System.out.println( "\nErreur de formatage, " +
-						"entrez un nombre r�el." );
+						"entrez un nombre réel." );
 				valide = false;
 			}
 		} while ( !valide );
@@ -465,16 +465,16 @@ public class OutilsLecture {
 	}
 
 	/**
-	 * La m�thode publique lireReelValide() permet d'afficher une question et de
-	 * lire un nombre r�el qui fait partie d'un intervalle.
+	 * La méthode publique lireReelValide() permet d'afficher une question et de
+	 * lire un nombre réel qui fait partie d'un intervalle.
 	 * 
 	 * @param question
-	 *            La question � afficher.
+	 *            La question à afficher.
 	 * @param min
 	 *            Le nombre minimum.
 	 * @param max
 	 *            Le nombre maximum.
-	 * @return Le nombre r�el lu.
+	 * @return Le nombre réel lu.
 	 */
 
 	public static double lireReelValide( String question,
@@ -490,7 +490,7 @@ public class OutilsLecture {
 			// Erreur, si le nombre lu n'est pas entre min et max.
 
 			if ( nombreLu < min || nombreLu > max ) {
-				System.out.println( "\nErreur, entrez un nombre r�el entre "
+				System.out.println( "\nErreur, entrez un nombre réel entre "
 						+ min + " et " + max + "." );
 				valide = false;
 			}
