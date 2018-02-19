@@ -1,9 +1,8 @@
 package Projet2AssuranceQualiteLogiciels;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
-import java.nio.file.Paths;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +10,7 @@ public class importerText {
 	private Facture facture;
 	private List<Plat> listePlats;
 	
-	public  importerText(String cheminFichier) {
+	public  importerText(String cheminFichier) throws IOException {
 		
 		String ligne = "";
 		
@@ -21,9 +20,9 @@ public class importerText {
 		
 		this.listePlats = new ArrayList<>();
 		
+		BufferedReader lecture = new BufferedReader( new FileReader( cheminFichier ) );
+		
 		try {
-			
-			BufferedReader lecture = new BufferedReader( new FileReader( cheminFichier ) );
 			
 			while( ( ligne = lecture.readLine() ) != null)  {
 				
@@ -123,8 +122,12 @@ public class importerText {
 		} catch (Exception e) {
 			
 			System.out.println(e.getMessage());
+			
+			lecture.close();
 		
 		}
+		
+		
 		
 		
 		// TODO À continuer par Philippe
