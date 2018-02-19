@@ -1,3 +1,10 @@
+Tous les fichiers sources se trouvent dans le package Projet2AssuranceQualiteLogiciels.
 Les noms de classe doivent commencer par une majuscule.
 Les noms de variable doivent commencer par une minuscule.
 Les nom des variables ne doovent pas contenir d'espace, mais des tirets-bas ( si nécessaire ).
+Les nom des variables ne doivent pas contenir de tirets, ni de tirets bas.
+Pour accéder ou modifier les variables privées d'objets, il faut utiliser des getters et des setters.
+Il doit y avoir une classe pour les objets Client, Facture et Plat, puis exporter et importer des fichiers textes doit être fait dans des classes distinctes.
+Idéalement, créer des objets doit être fait avec le moins de paramètres possibles au début et les informations doivent être ajoutés par la suite.
+Un court commentaire doit être ajouté pour chaque méthode des classes d'objets.
+Avoir complété le travail à temps (19 février 2017).
