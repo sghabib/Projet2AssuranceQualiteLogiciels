@@ -1,18 +1,11 @@
 package Projet2AssuranceQualiteLogiciels;
 
-import java.io.BufferedReader;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
 public class importerText {
-	private String cheminFichier;
 	private Facture facture;
 	
-	public importerText(String cheminFichier) {
-		this.cheminFichier = cheminFichier;
+	public  importerText(String cheminFichier) {
 		
+		OutilsFichier.ouvrirFicBinLecture(cheminFichier);
 	
 		
 		// TODO À continuer par Philippe
