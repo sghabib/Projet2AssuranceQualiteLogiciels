@@ -1,12 +1,13 @@
 package Projet2AssuranceQualiteLogiciels;
 
 public class importerText {
-	private Facture facture;
 	private String cheminFichier;
+	private Facture facture;
 	
 	public importerText(String cheminFichier) {
-		this.facture = facture;
 		this.cheminFichier = cheminFichier;
+		
+		// TODO À continuer par Philippe
 	}
 	
 	public Facture getFacture() {

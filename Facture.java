@@ -3,12 +3,33 @@ package Projet2AssuranceQualiteLogiciels;
 import java.util.ArrayList;
 
 public class Facture {
-	ArrayList<Client> listeClient = new ArrayList<>();
+	private ArrayList<Client> listeClient = new ArrayList<>();
+	private String facture = "Bienvenue chez Barette !\nFactures:\n";
+	
+	// Initialise d'abord une facture vide
 	public Facture() {
 		
 	}
 	
+	// Ajoute un client à toutes les fois que nous en avons un
+	public void addClient(Client client) {
+		listeClient.add(client);
+	}
+	
+	// Génère la chaîne de caractère du fichier de sortie
+	public void genererFacture() {
+		for (Client client : listeClient) {
+			facture = facture + client.toString() + "\n";
+		}
+	}
+	
+	// Afficher la facture à l'écran
 	public void afficherFacture() {
-		
+		System.out.println(facture);
+	}
+	
+	// Retourner la chaîne de caractère pour le fichier de sortie
+	public String getFacture() {
+		return facture;
 	}
 }
