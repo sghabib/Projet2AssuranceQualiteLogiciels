@@ -1,7 +1,7 @@
 /**
  * Auteure : Soti
  * Fichier : OutilsFichier.java
- * Package : outilsjava
+ * Package : Projet2AssuranceQualiteLogiciels
  * Date    : Hiver 2017
  * Cours   : Programmation avec Java
  */
