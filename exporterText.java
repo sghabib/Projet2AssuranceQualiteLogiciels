@@ -10,7 +10,7 @@ public class exporterText {
 		this.facture = facture;
 		this.cheminFichier = cheminFichier;
 		
-		ObjectOutputStream fichier = OutilsFichier.ouvrirFicBinEcriture(cheminFichier);
+		
 		
 		// TODO À continuer par Philippe
 	}
