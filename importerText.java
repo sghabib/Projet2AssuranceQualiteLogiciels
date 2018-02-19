@@ -7,6 +7,8 @@ public class importerText {
 	public importerText(String cheminFichier) {
 		this.cheminFichier = cheminFichier;
 		
+		Path chemin
+		
 		// TODO À continuer par Philippe
 	}
 	
