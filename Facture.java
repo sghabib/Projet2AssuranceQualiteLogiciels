@@ -27,9 +27,11 @@ public class Facture {
 	public void afficherFacture() {
 		System.out.println(facture);
 	}
-	
+
 	// Retourner la chaîne de caractère pour le fichier de sortie
-	public String getFacture() {
+	@Override
+	public String toString() {
 		return facture;
 	}
+	
 }
