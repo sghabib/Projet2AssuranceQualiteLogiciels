@@ -8,8 +8,9 @@ public class importerText {
 	public  importerText(String cheminFichier) {
 		
 		ObjectInputStream fichier = OutilsFichier.ouvrirFicBinLecture(cheminFichier);
-	
 		
+		
+	
 		// TODO À continuer par Philippe
 	}
 	
