@@ -1,5 +1,5 @@
 Bienvenue chez Barette !
 Factures:
 Roger 10,50$
-C�line 20,75$
+Céline 20,75$
 Steeve 0,00$
