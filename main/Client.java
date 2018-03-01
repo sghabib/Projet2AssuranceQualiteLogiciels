@@ -34,7 +34,7 @@ public class Client {
 		if (montantFacture != 0)
 			ligneFacture = nom + ' ' + decimalFormat.format(montantFacture) + "$";
 		else
-			ligneFacture = ""
+			ligneFacture = "";
 		return ligneFacture;
 	}
 

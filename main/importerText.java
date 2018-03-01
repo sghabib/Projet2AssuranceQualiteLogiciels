@@ -115,8 +115,7 @@ public class importerText {
 				}
 
 			}
-
-			this.facture.genererFacture();
+			
 			this.facture.afficherFacture();
 
 		} catch (Exception e) {
