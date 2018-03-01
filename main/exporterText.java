@@ -1,4 +1,4 @@
-package Projet2AssuranceQualiteLogiciels;
+package main;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
