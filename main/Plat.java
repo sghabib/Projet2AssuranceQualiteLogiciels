@@ -1,4 +1,4 @@
-package Projet2AssuranceQualiteLogiciels;
+package main;
 
 public class Plat {
 	private String nom;
