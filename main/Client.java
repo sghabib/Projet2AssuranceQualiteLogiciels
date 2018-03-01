@@ -30,7 +30,12 @@ public class Client {
 	@Override
 	public String toString() {
 		DecimalFormat decimalFormat = new DecimalFormat("#0.00");
-		return nom + ' ' + decimalFormat.format(montantFacture) + "$";
+		String ligneFacture;
+		if (montantFacture != 0)
+			ligneFacture = nom + ' ' + decimalFormat.format(montantFacture) + "$";
+		else
+			ligneFacture = ""
+		return ligneFacture;
 	}
 
 }

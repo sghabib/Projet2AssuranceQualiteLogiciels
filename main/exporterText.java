@@ -11,7 +11,10 @@ public class exporterText {
 
 	public exporterText(Facture facture, String cheminFichier) {
 
-		Path chemin = Paths.get(cheminFichier);
+		DateTimeFormatter formatter = DateTimeFormat.forPattern("dd/MM/yyyy-HH:mm");
+		DateTime dt = formatter.parseDateTime(string);
+		
+		Path chemin = Paths.get(cheminFichier + dt + ".txt");
 
 		try {
 

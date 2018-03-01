@@ -25,7 +25,8 @@ public class Facture {
 	public void genererFacture() {
 		facture = "Bienvenue chez Barette !\nFactures:\n";
 		for (Client client : listeClient) {
-			facture = facture + client.toString() + "\n";
+			if(client.toString() != "")
+				facture = facture + client.toString() + "\n";
 		}
 	}
 
@@ -42,7 +43,17 @@ public class Facture {
 
 	// Calcul du montant de la facture finale
 	public static double calculerMontantFacture(Plat platCommande, int nbCommande) {
-		return nbCommande * platCommande.getPrix();
+		return nbCommande * calculerTotalAvecTaxes(platCommande.getPrix());
+	}
+	
+	// Calcul des taxes (TPS 5% et TVQ 10%)
+	public double calculerTaxes(double prix) {
+		return prix * 0.05 + prix * 0.10;
+	}
+	
+	// Calcul du total avec les taxes
+	public double calculerTotalAvecTaxes(double prix) {
+		return prix + calculerTaxes(prix);
 	}
 
 }
